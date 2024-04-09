@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ticket of tickets; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ ticket.titre }}</td>
+                <td>{{ ticket.date | date:'short'}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
