@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Ticket } from './ticket';
 import { Observable } from 'rxjs';
 
@@ -9,9 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class TicketService {
   private ticketsUrl: string;
+  private ticketAddUrl: string;
 
   constructor(private http: HttpClient) {
     this.ticketsUrl = 'http://localhost:8080/ticket';
+    this.ticketAddUrl = 'http://localhost:8080/ticket/add';
   }
 
   public findAll(): Observable<Ticket[]> {
@@ -19,6 +21,6 @@ export class TicketService {
   }
 
   public save(ticket: Ticket) {
-    return this.http.post<Ticket>(this.ticketsUrl, ticket);
+    return this.http.post<Ticket>(this.ticketAddUrl, ticket);
   }
 }

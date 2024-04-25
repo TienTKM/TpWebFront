@@ -1,0 +1,33 @@
+<!-- Create the text box to insert the user-->
+<div class="form-group">
+  <label for="user">Utilisateur</label>
+  <input [(ngModel)]="ticket.auteurNom" id="user">
+
+<!-- Create the text box to insert the title-->
+<div class="form-group">
+  <label for="title">Titre</label>
+  <input [(ngModel)]="ticket.titre" id="title">
+
+<!-- Create the check box for the demand-->
+<div class="form-group">
+  <label for="demande">Demande</label>
+  <input type="checkbox" [(ngModel)]="ticket.demande" id="demande">
+
+<!-- Create the check box for the discussion-->
+<div class="form-group">
+  <label for="discussion">Discussion</label>
+  <input type="checkbox" [(ngModel)]="ticket.discussion" id="discussion">
+
+<!-- Create the button to submit the form on another line-->
+<div class="form-group">
+  <button class="btn btn-primary" (click)="addTicket()">Ajouter</button>
+</div>
+
+<!-- Show the ticket properties-->
+<div>
+    <p>{{ ticket.auteurNom }}</p>
+    <p>{{ ticket.titre }}</p>
+    <p>{{ ticket.demande }}</p>
+    <p>{{ ticket.discussion }}</p>
+</div>
+
