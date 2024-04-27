@@ -1,0 +1,22 @@
+  .center {
+    display: flex;
+    height: flex;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  
+  .card-title {
+    font-size: 2em;
+  }
+  
+  .list-inline-item {
+    list-style-type: none;
+  }
+  
+  .list-inline-item a {
+    color: #3498db;
+  }
+  
+  .list-inline-item a:hover {
+    color: #2980b9;
+  }

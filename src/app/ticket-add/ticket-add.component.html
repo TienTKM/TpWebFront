@@ -1,33 +1,33 @@
-<!-- Create the text box to insert the user-->
-<div class="form-group">
-  <label for="user">Utilisateur</label>
-  <input [(ngModel)]="ticket.auteurNom" id="user">
+<div class="container mt-5">
+  <form>
+    <!-- Create the text box to insert the user-->
+    <div class="form-group">
+      <label for="user">Utilisateur</label>
+      <input class="form-control" [(ngModel)]="username" id="user" name="user">
+    </div>
 
-<!-- Create the text box to insert the title-->
-<div class="form-group">
-  <label for="title">Titre</label>
-  <input [(ngModel)]="ticket.titre" id="title">
+    <!-- Create the text box to insert the title-->
+    <div class="form-group">
+      <label for="title">Titre</label>
+      <input class="form-control" [(ngModel)]="titre" id="title" name="title">
+    </div>
 
-<!-- Create the check box for the demand-->
-<div class="form-group">
-  <label for="demande">Demande</label>
-  <input type="checkbox" [(ngModel)]="ticket.demande" id="demande">
+    <!-- Create the check box for the demand-->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [(ngModel)]="demande" id="demande" name="demande">
+      <label class="form-check-label" for="demande">Demande</label>
+    </div>
 
-<!-- Create the check box for the discussion-->
-<div class="form-group">
-  <label for="discussion">Discussion</label>
-  <input type="checkbox" [(ngModel)]="ticket.discussion" id="discussion">
+    <!-- Create the button to submit the form on another line-->
+    <div class="form-group mt-3">
+      <button class="btn btn-primary" (click)="addTicket()">Ajouter</button>
+    </div>
+  </form>
 
-<!-- Create the button to submit the form on another line-->
-<div class="form-group">
-  <button class="btn btn-primary" (click)="addTicket()">Ajouter</button>
+  <!-- Show the ticket properties-->
+  <div class="mt-5">
+    <p><strong>Utilisateur:</strong> {{ username }}</p>
+    <p><strong>Titre:</strong> {{ titre }}</p>
+    <p><strong>Demande:</strong> {{ demande }}</p>
+  </div>
 </div>
-
-<!-- Show the ticket properties-->
-<div>
-    <p>{{ ticket.auteurNom }}</p>
-    <p>{{ ticket.titre }}</p>
-    <p>{{ ticket.demande }}</p>
-    <p>{{ ticket.discussion }}</p>
-</div>
-
