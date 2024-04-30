@@ -4,6 +4,7 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
+          <th scope="col">ID</th>
           <th scope="col">Titre</th>
           <th scope="col">Tags</th>
           <th scope="col">Statut</th>
@@ -17,7 +18,8 @@
       <tbody>
         <tr *ngFor="let ticket of tickets; let i = index">
           <th scope="row">{{ i + 1 }}</th>
-          <td>{{ ticket.titre }}</td>
+          <td>{{ ticket.id }}</td>
+          <td><a [routerLink]="['/ticket', ticket.id]">{{ ticket.titre }}</a></td>
           <td>{{ ticket.tags.join(', ') }}</td>
           <td>{{ ticket.statut }}</td>
           <td>{{ ticket.suivis.length }}</td>

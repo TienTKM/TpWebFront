@@ -7,14 +7,14 @@ export enum Statut {
 }
 
 export class Ticket {
-    id: number | undefined;
+    id!: number;
     titre: string;
     tags: string[];
     statut: Statut;
     suivis: Personne[];
     demande: boolean;
     date: Date;
-    discussion: Discussion | undefined;
+    discussion!: Discussion;
     auteur: Utilisateur;
 
     constructor(auteur: Utilisateur, date: Date, titre: string, demande: boolean, discussion: boolean) {

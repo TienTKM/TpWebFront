@@ -9,6 +9,7 @@ import { TicketService } from './ticket.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TicketAddComponent } from './ticket-add/ticket-add.component';
 import { FormsModule } from '@angular/forms';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 
 const routes: Routes = [ 
   { path: 'ticket', component: TicketListComponent }
@@ -18,7 +19,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     TicketListComponent,
-    TicketAddComponent
+    TicketAddComponent,
+    EditTicketComponent
   ],
   imports: [
     BrowserModule,

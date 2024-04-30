@@ -1,0 +1,19 @@
+<div *ngIf="ticket">
+    <form (ngSubmit)="save()">
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input type="text" id="title" [(ngModel)]="ticket.titre" name="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" [(ngModel)]="ticket.tags" name="tags" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="statut">Statut</label>
+            <select id="statut" [(ngModel)]="ticket.statut" name="statut" class="form-control">
+                <option *ngFor="let statut of statuts" [value]="statut">{{statut}}</option>
+            </select>
+        </div>        
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

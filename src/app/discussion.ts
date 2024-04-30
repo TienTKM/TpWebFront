@@ -5,5 +5,7 @@ export class Discussion {
     commentaires: Commentaire[] | undefined;
     participants: Personne[] | undefined;
 
-    constructor() {}
+    constructor() {
+        this.commentaires = [];
+    }
 }
